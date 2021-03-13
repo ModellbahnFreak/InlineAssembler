@@ -13,9 +13,14 @@ IF ERRORLEVEL 1 (
             pause
             start https://github.com/Kitware/CMake/releases/latest
             exit 1
+        ) else (
+            "C:\Program Files\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake" -A Win32 .
         )
+    ) else (
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake" -A Win32 .
     )
+) else (
+    cmake -A Win32 .
 )
 
-cmake -A Win32 .
 start .\InlineAssembler.sln
