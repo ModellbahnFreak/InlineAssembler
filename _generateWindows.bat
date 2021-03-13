@@ -1,3 +1,5 @@
+@echo off
+
 where /q cmake
 IF ERRORLEVEL 1 (
     echo "CMake wasn't found. This means it's propably not installed."
