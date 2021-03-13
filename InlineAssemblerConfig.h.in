@@ -1,0 +1,2 @@
+#define SHEET_NUM @InlineAssembler_VERSION_MAJOR@
+#define TASK_NUM @InlineAssembler_VERSION_MINOR@
