@@ -6,7 +6,7 @@ long foo(int A) {
     int out;
     // You can't assume A will be in RDI: after inlining it prob. won't be
     __asm {
-        mov   ecx, A                   // comment syntax; lol
+        mov   ecx, A                   // comment syntax
         add   ecx, 5
         mov   out, ecx
     }
