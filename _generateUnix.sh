@@ -72,7 +72,9 @@ then
     esac
 fi
 
-( CC=clang && CXX=clang++ && cmake --cmake-clean-cache . ) || ( echo "Error during configuration. There are propably helpfull messages above. Re-run this script once errors are resolved." && exit 1 )
+export CC=clang
+export CXX=clang++
+cmake --cmake-clean-cache . || ( echo "Error during configuration. There are propably helpfull messages above. Re-run this script once errors are resolved." && exit 1 )
 
 echo "Configuration successfull."
 echo "You can now compile and build the application (on linux most likely using 'make')"
