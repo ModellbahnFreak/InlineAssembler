@@ -1,11 +1,12 @@
 #include <iostream>
 #include "InlineAssemblerConfig.h"
 
+inline
 long foo(int A) {
     int out;
     // You can't assume A will be in RDI: after inlining it prob. won't be
     __asm {
-        mov   ecx, A                   // comment syntax
+        mov   ecx, A                   // comment syntax; lol
         add   ecx, 5
         mov   out, ecx
     }
